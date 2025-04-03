@@ -9,13 +9,14 @@ datasource db {
 }
 
 model Technology {
-  id          Int      @id @default(autoincrement())
-  name        String   @unique
+  id          Int       @id @default(autoincrement())
+  name        String    @unique
   description String
   image       String
-  isHighlight Boolean  @default(false) @map("is_highlight")
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
+  isHighlight Boolean   @default(false) @map("is_highlight")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  projects    Project[]
 
   @@map("technologies")
 }
@@ -44,6 +45,7 @@ model Project {
   createdAt     DateTime     @default(now()) @map("created_at")
   updatedAt     DateTime     @updatedAt @map("updated_at")
   repositoryURL String       @map("repository_url")
+  technologies  Technology[]
 
   @@map("projects")
 }
