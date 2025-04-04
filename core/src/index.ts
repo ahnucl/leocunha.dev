@@ -1,5 +1,3 @@
-import { Id } from './shared/id'
-
-const x = 'Leonardo!!'
-
-export { x, Id }
+export * from './projects'
+export * from './shared'
+export * from './technologies'
