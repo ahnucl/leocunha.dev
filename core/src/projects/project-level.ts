@@ -1,4 +1,4 @@
-export enum Level {
+export enum ProjectLevel {
   BASIC,
   BEGINNER,
   INTERMEDIATE,
