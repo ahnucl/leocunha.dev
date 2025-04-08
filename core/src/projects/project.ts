@@ -10,6 +10,6 @@ export interface Project {
   type: ProjectType
   level: ProjectLevel
   isHighlight: boolean
-  repository: string
+  repositoryURL: string
   technologies: Technology[]
 }
